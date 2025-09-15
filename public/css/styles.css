@@ -1,6 +1,148 @@
 /******* Change Box Model ***************/
+/*
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+*/
+
+/* Base styles - Mobile First */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080;
+  color: #fff;
+  padding: 1rem;
+}
+
+.siteName a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#tools a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#tools a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+  background-color: #0066cc;
+  padding: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0.5rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.home {
+  padding: 1rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hero-text h2 {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.feature h3 {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 768px) {
+  #top-header {
+    padding: 1rem 2rem;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+
+  .features {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .feature {
+    width: 48%;
+  }
+
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
 }

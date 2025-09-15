@@ -1,1 +1,35 @@
-<h1>Chinedu Kingsley Amuji</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %>
+    <%- include('partials/navigation') %>
+
+    <main class="home">
+      <h1>Chinedu Kingsley Amuji</h1>
+
+      <section class="hero">
+        <img src="/images/hero-car.jpg" alt="CSE Motors Hero Car" />
+        <div class="hero-text">
+          <h2>Welcome to CSE Motors</h2>
+          <p>Your trusted partner in automotive excellence.</p>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <img src="/images/feature1.jpg" alt="Quality Vehicles" />
+          <h3>Quality Vehicles</h3>
+          <p>We offer a wide range of top-tier vehicles for every budget.</p>
+        </div>
+        <div class="feature">
+          <img src="/images/feature2.jpg" alt="Expert Service" />
+          <h3>Expert Service</h3>
+          <p>Our technicians are certified and passionate about cars.</p>
+        </div>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
