@@ -1,148 +1,134 @@
-/******* Change Box Model ***************/
-/*
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-*/
+/* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* Base styles - Mobile First */
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #014f79;
+}
+
+h1 {
+  text-align: center;
+  color: #f4f4f4;;
+}
+h2{
+  color: #014f79;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+  list-style-type: none;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
 }
 
 /* Header */
-#top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #004080;
+header {
+  background-color: #014f79;;
   color: #fff;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
-.siteName a {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#tools a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#tools a:hover {
-  text-decoration: underline;
-}
-
-/* Navigation */
-nav {
-  background-color: #0066cc;
-  padding: 0.5rem;
-}
-
-nav ul {
-  list-style: none;
+/* Vehicle Highlight Section */
+.vehicle-highlight {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  padding: 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
-nav li {
-  margin: 0.5rem 1rem;
-  color: #fff;
-  font-weight: bold;
+.vehicle-highlight picture,
+.vehicle-highlight img {
+  max-width: 300px;
+  margin-right: 2rem;
+}
+
+.vehicle-details {
+  max-width: 400px;
+}
+
+.vehicle-details ul {
+  display: grid;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.vehicle-details button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-/* Hero Section */
-.home {
-  padding: 1rem;
+.vehicle-details button:hover {
+  background-color: #e65c00;
 }
 
-.hero {
-  text-align: center;
+/* Grid Layout Section */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.hero img {
-  width: 100%;
-  height: auto;
+/* Reviews */
+.reviews {
+  background-color: #fff;
+  padding: 1.5rem;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.hero-text h2 {
-  font-size: 1.8rem;
-  margin-top: 0.5rem;
-}
-
-.hero-text p {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-}
-
-/* Features Section */
-.features {
-  display: flex;
+.reviews ul  {
+   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  margin-bottom: 0.9rem;
+  font-style: italic;
+}
+.reviews li  {
+   padding-top: 10px;
+  margin-bottom: 0.9rem;
+  font-style: italic;
 }
 
-.feature {
+/* Upgrades */
+.upgrades {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.upgrade-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.upgrade-items .item {
   text-align: center;
 }
 
-.feature img {
-  width: 100%;
+.upgrade-items img {
+  width: 100px;
   height: auto;
-  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
-.feature h3 {
-  font-size: 1.4rem;
-  margin-top: 0.5rem;
+.upgrade-items a {
+  text-decoration: none;
+  color: #0077cc;
 }
 
-.feature p {
-  font-size: 1rem;
-  margin-top: 0.3rem;
-}
-
-/* Media Query for Larger Screens */
-@media screen and (min-width: 768px) {
-  #top-header {
-    padding: 1rem 2rem;
-  }
-
-  nav ul {
-    justify-content: flex-start;
-    padding-left: 2rem;
-  }
-
-  .features {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .feature {
-    width: 48%;
-  }
-
-  .hero-text h2 {
-    font-size: 2.5rem;
-  }
-
-  .hero-text p {
-    font-size: 1.2rem;
-  }
+.upgrade-items a:hover {
+  text-decoration: underline;
 }
